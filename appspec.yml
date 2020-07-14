@@ -24,7 +24,7 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: /app/
-    destination: /home/temp/
+    destination: /home/ec2-user/
 # files:
 #   - source: 
 #     destination:
@@ -104,10 +104,10 @@ hooks:
       # runas:
     - location: pipeline-scripts/afterInstall.sh
       timeout: 60
-    - location: pipeline-scripts/set-envfile.sh
-      timeout: 60
-    - location: pipeline-scripts/run-app.sh
-      timeout: 60
+#    - location: pipeline-scripts/set-envfile.sh
+#      timeout: 60
+#    - location: pipeline-scripts/run-app.sh
+#      timeout: 60
       # runas:
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
